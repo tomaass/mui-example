@@ -7,7 +7,7 @@ export type DashboardListProps = {
 
 export const DashboardList = ({ items }: DashboardListProps) => {
   return (
-    <List>
+    <List sx={{ flex: 1 }}>
       {items.map((item) => (
         <DashboardListItem item={item} />
       ))}

@@ -30,7 +30,7 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Container maxWidth="md" sx={{ minHeight: '100vh' }}>
+        <Container maxWidth="lg" sx={{ minHeight: '100vh' }}>
           <LandingPage />
         </Container>
       </ThemeProvider>

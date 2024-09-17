@@ -11,12 +11,13 @@ import {
   SportsEsports,
   Upload,
 } from '@mui/icons-material';
-import { Stack } from '@mui/material';
+import { Grid2, Stack, Typography } from '@mui/material';
 import { CoachProfile } from './CoachProfile';
 import { EventStart } from './EventStart';
 import { LandingPageCard } from './LandingPageCard';
 import { DashboardList } from './DashboardList';
 import { DashboardListItemModel } from './DashboardListItem';
+import { Stat } from './Stat';
 
 const firstItems: DashboardListItemModel[] = [
   {
@@ -102,12 +103,47 @@ export const LandingPage = () => {
           title="Trainer Stats"
           actionIcon={<ChevronRight />}
           sx={{ flex: 2 }}
-        />
+        >
+          <Grid2 container spacing={2}>
+            <Grid2 container spacing={2} size={4}>
+              <Grid2 size={6}>
+                <Stat title="Hands" value={0} />
+              </Grid2>
+              <Grid2 size={6}>
+                <Stat title="Moves" value={3} />
+              </Grid2>
+              <Grid2 size={6}>
+                <Stat title="Mistakes" value={42} />
+              </Grid2>
+              <Grid2 size={6}>
+                <Stat title="GTOW score" value={69} />
+              </Grid2>
+            </Grid2>
+            <Grid2 size={8}>
+              <Typography>Progress bars here</Typography>
+            </Grid2>
+          </Grid2>
+        </LandingPageCard>
         <LandingPageCard
           title="Analyzer Stats"
           actionIcon={<ChevronRight />}
           sx={{ flex: 1 }}
-        />
+        >
+          <Grid2 container spacing={2}>
+            <Grid2 size={6}>
+              <Stat title="Total" value={0} />
+            </Grid2>
+            <Grid2 size={6}>
+              <Stat title="Correct" value={3} />
+            </Grid2>
+            <Grid2 size={6}>
+              <Stat title="Wrong" value={42} />
+            </Grid2>
+            <Grid2 size={6}>
+              <Stat title="Avg. EV loss" value={69} />
+            </Grid2>
+          </Grid2>
+        </LandingPageCard>
       </Stack>
     </Stack>
   );
