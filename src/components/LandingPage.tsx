@@ -2,6 +2,7 @@ import {
   AdsClick,
   BackupTable,
   CardMembership,
+  Check,
   ChevronRight,
   CoPresent,
   CreateNewFolder,
@@ -11,12 +12,13 @@ import {
   SportsEsports,
   Upload,
 } from '@mui/icons-material';
-import { Grid2, Stack, Typography } from '@mui/material';
+import { Grid2, Stack } from '@mui/material';
 import { CoachProfile } from './CoachProfile';
-import { EventStart } from './EventStart';
-import { LandingPageCard } from './LandingPageCard';
 import { DashboardList } from './DashboardList';
 import { DashboardListItemModel } from './DashboardListItem';
+import { EventStart } from './EventStart';
+import { LandingPageCard } from './LandingPageCard';
+import { Progress } from './Progress';
 import { Stat } from './Stat';
 
 const firstItems: DashboardListItemModel[] = [
@@ -120,7 +122,38 @@ export const LandingPage = () => {
               </Grid2>
             </Grid2>
             <Grid2 size={8}>
-              <Typography>Progress bars here</Typography>
+              <Stack spacing={1}>
+                <Progress
+                  color="success"
+                  progress={30}
+                  title="Best"
+                  icon={<Check />}
+                />
+                <Progress
+                  color="success"
+                  progress={45}
+                  title="Correct"
+                  icon={<Check />}
+                />
+                <Progress
+                  color="warning"
+                  progress={10}
+                  title="Inaccuracy"
+                  icon={<Check />}
+                />
+                <Progress
+                  color="error"
+                  progress={5}
+                  title="Wrong"
+                  icon={<Check />}
+                />
+                <Progress
+                  color="error"
+                  progress={0}
+                  title="Blunder"
+                  icon={<Check />}
+                />
+              </Stack>
             </Grid2>
           </Grid2>
         </LandingPageCard>

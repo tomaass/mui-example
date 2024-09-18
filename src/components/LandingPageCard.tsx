@@ -4,6 +4,7 @@ import {
   CardHeader,
   CardProps,
   IconButton,
+  lighten,
 } from '@mui/material';
 
 export type LandingPageCardProps = CardProps & {
@@ -23,6 +24,10 @@ export const LandingPageCard = ({
         title={title}
         titleTypographyProps={{ variant: 'h6' }}
         action={actionIcon ? <IconButton>{actionIcon}</IconButton> : null}
+        sx={{
+          backgroundColor: (theme) =>
+            lighten(theme.palette.background.paper, 0.08),
+        }}
       />
       <CardContent sx={{ px: 4 }}>{children}</CardContent>
     </Card>

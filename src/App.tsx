@@ -9,6 +9,19 @@ import { LandingPage } from './components/LandingPage';
 const theme = createTheme({
   palette: {
     mode: 'dark',
+    success: {
+      main: '#aaffb2',
+    },
+    warning: {
+      main: '#ffa726',
+    },
+    info: {
+      main: '#29B6F6',
+    },
+    background: {},
+  },
+  typography: {
+    fontFamily: 'Inter',
   },
   components: {
     MuiCssBaseline: {
@@ -19,6 +32,7 @@ const theme = createTheme({
         body: {
           backgroundColor: theme.palette.background.default,
           minHeight: '100vh',
+          fontFamily: 'Inter',
         },
       }),
     },
